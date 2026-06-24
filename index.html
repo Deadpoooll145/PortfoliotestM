@@ -384,7 +384,7 @@
                     </div>
                 </div>
 
-                <!-- Licence Physique -->
+                <!-- Licence Physique (Accordéon) -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition cursor-pointer group" onclick="toggleSection('edu-licence', 'icon-licence')">
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
                         <div class="w-24 h-24 bg-purple-50 rounded-2xl border border-purple-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
@@ -426,8 +426,8 @@
                 <!-- Baccalauréat -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition cursor-pointer group" onclick="toggleSection('edu-bac', 'icon-bac')">
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
-                        <div class="w-24 h-24 bg-slate-50 rounded-2xl border border-slate-200 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
-                            <i data-lucide="book-check" class="w-10 h-10 text-slate-400"></i>
+                        <div class="w-24 h-24 bg-white rounded-2xl border border-slate-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
+                            <img src="./images/logo_lycee.jpg" alt="Logo Lycée" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xs text-center font-bold text-slate-400\'>LYCÉE</span>'">
                         </div>
                         <div class="flex-grow text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 group-hover:text-slate-600 transition">Baccalauréat Général</h3>
@@ -767,10 +767,15 @@
 
     <!-- Modale Definition -->
     <div id="modal-def" class="modal">
-        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm p-8 relative">
-            <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal"><i data-lucide="x"></i></button>
-            <h2 id="modal-def-title" class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Définition</h2>
-            <div id="modal-def-text" class="text-slate-600 leading-relaxed text-sm"></div>
+        <div class="bg-white rounded-[2rem] shadow-2xl w-full max-w-lg p-8 md:p-10 relative">
+            <button class="absolute top-6 right-6 text-slate-400 hover:text-red-500 close-modal transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
+            <div class="flex items-center gap-4 mb-6 border-b border-slate-100 pb-6">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shrink-0">
+                    <i data-lucide="info" class="w-7 h-7"></i>
+                </div>
+                <h2 id="modal-def-title" class="text-2xl md:text-3xl font-bold text-slate-900">Définition</h2>
+            </div>
+            <div id="modal-def-text" class="text-slate-700 leading-relaxed text-base md:text-lg font-medium"></div>
         </div>
     </div>
 
