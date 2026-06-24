@@ -161,86 +161,95 @@
                 Projets Réalisés
             </h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-slate-800 mb-8 pl-4 border-l-4 border-primary">Projets Universitaires</h3>
                 
-                <!-- 1. Micro-plastiques -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                    <div class="h-56 bg-slate-50 relative overflow-hidden">
-                        <img src="./images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-teal-600 shadow-sm">S3 2024</div>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-teal-600 transition mb-3">Analyse Micro-Plastiques</h3>
-                        <p class="text-slate-500 text-sm mb-6 flex-grow">Collecte en mer et caractérisation en laboratoire (Spectroscopie IR, Chromatographie) dans le cadre de la Régate des IUT.</p>
-                        <div class="flex gap-2">
-                            <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-teal-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-micro')">
-                                <i data-lucide="eye" class="w-4 h-4"></i> Détails
-                            </button>
-                            <a href="Rapport_Micro_Plastiques.pdf" target="_blank" class="flex-1 py-3 bg-teal-50 text-teal-600 rounded-xl hover:bg-teal-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
-                                <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
-                            </a>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    
+                    <!-- 1. Panneaux Solaires (En haut à gauche) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <div class="h-56 bg-slate-50 relative overflow-hidden">
+                            <img src="./images/projet_solaire.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1509391366360-12009a341e97?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-yellow-600 shadow-sm">S4 2026</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-yellow-500 transition mb-3">Installation Photovoltaïque</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-grow">Dimensionnement d'une installation solaire sur le lycée Kléber, calcul de rendement et évaluation économique via PVsyst.</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-solaire')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <a href="Rapport_Solaire.pdf" target="_blank" class="flex-1 py-3 bg-yellow-50 text-yellow-600 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 2. Capteur Cardiaque (PPG) -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                    <div class="h-56 bg-slate-50 relative overflow-hidden">
-                        <img src="./images/projet_ppg.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop'">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-500 shadow-sm">S3 2025</div>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-red-500 transition mb-3">Capteur Cardiaque (PPG)</h3>
-                        <p class="text-slate-500 text-sm mb-6 flex-grow">Conception d'un photo-pléthysmographe analogique. Chaîne complète : capteur optique, filtrage actif, amplification et traitement.</p>
-                        <div class="flex gap-2">
-                            <button class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-ppg')">
-                                <i data-lucide="eye" class="w-4 h-4"></i> Détails Techniques
-                            </button>
+                    <!-- 2. Journée de l'eau (En haut à droite) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <!-- Ajustement de l'image pour qu'elle ne soit pas coupée (object-contain + fond blanc) -->
+                        <div class="h-56 bg-white relative overflow-hidden flex items-center justify-center p-4">
+                            <img src="./images/projet_eau.jpg" class="h-full w-auto object-contain group-hover:scale-105 transition duration-700 drop-shadow-md" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm z-10">S3-S4 2025</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition mb-3">Journée Mondiale de l'Eau</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-grow">Organisation d'un événement de sensibilisation à l'UPEC : conférences, logistique et budget participatif.</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-eau')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <a href="Rapport_Journee_Eau.pdf" target="_blank" class="flex-1 py-3 bg-blue-50 text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 3. Journée de l'eau -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                    <div class="h-56 bg-slate-50 relative overflow-hidden">
-                        <!-- Ajustement de l'image (object-top pour bien voir l'affiche) -->
-                        <img src="./images/projet_eau.jpg" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">S3-S4 2025</div>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition mb-3">Journée Mondiale de l'Eau</h3>
-                        <p class="text-slate-500 text-sm mb-6 flex-grow">Organisation d'un événement de sensibilisation à l'UPEC : conférences, logistique et budget participatif.</p>
-                        <div class="flex gap-2">
-                            <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-eau')">
-                                <i data-lucide="eye" class="w-4 h-4"></i> Détails
-                            </button>
-                            <a href="Rapport_Journee_Eau.pdf" target="_blank" class="flex-1 py-3 bg-blue-50 text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
-                                <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
-                            </a>
+                    <!-- 3. Capteur Cardiaque (PPG) (En bas à gauche) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <div class="h-56 bg-slate-50 relative overflow-hidden">
+                            <img src="./images/projet_ppg.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-500 shadow-sm">S3 2025</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-red-500 transition mb-3">Capteur Cardiaque (PPG)</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-grow">Conception d'un photo-pléthysmographe analogique. Chaîne complète : capteur optique, filtrage actif, amplification et traitement.</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-ppg')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <!-- Ajout du bouton Rapport -->
+                                <a href="Rapport_Capteur_PPG.pdf" target="_blank" class="flex-1 py-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 4. Panneaux Solaires -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                    <div class="h-56 bg-slate-50 relative overflow-hidden">
-                        <img src="./images/projet_solaire.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1509391366360-12009a341e97?q=80&w=2070&auto=format&fit=crop'">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-yellow-600 shadow-sm">S4 2026</div>
-                    </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-yellow-500 transition mb-3">Installation Photovoltaïque</h3>
-                        <p class="text-slate-500 text-sm mb-6 flex-grow">Dimensionnement d'une installation solaire sur le lycée Kléber, calcul de rendement et évaluation économique via PVsyst.</p>
-                        <div class="flex gap-2">
-                            <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-solaire')">
-                                <i data-lucide="eye" class="w-4 h-4"></i> Détails
-                            </button>
-                            <a href="Rapport_Solaire.pdf" target="_blank" class="flex-1 py-3 bg-yellow-50 text-yellow-600 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
-                                <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
-                            </a>
+                    <!-- 4. Micro-plastiques (En bas à droite) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <div class="h-56 bg-slate-50 relative overflow-hidden">
+                            <img src="./images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-teal-600 shadow-sm">S3 2024</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-teal-600 transition mb-3">Analyse Micro-Plastiques</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-grow">Collecte en mer et caractérisation en laboratoire (Spectroscopie IR, Chromatographie) dans le cadre de la Régate des IUT.</p>
+                            <div class="flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-teal-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-micro')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <!-- Modification ici : Flyer au lieu de Rapport -->
+                                <a href="Flyer_Micro_Plastiques.pdf" target="_blank" class="flex-1 py-3 bg-teal-50 text-teal-600 rounded-xl hover:bg-teal-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-image" class="w-4 h-4"></i> Flyer
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </section>
@@ -284,10 +293,8 @@
                                 </div>
                             </div>
                             
-                            <!-- RESSOURCES DU BUT MP -->
                             <h4 class="text-xl font-bold text-slate-900 mb-6 mt-16 text-center">Ressources de la Formation</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-                                <!-- Sciences Fondamentales -->
                                 <div onclick="event.stopPropagation(); openRessource('sciences')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-green-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-3 group-hover/card:bg-green-500 group-hover/card:text-white transition-colors">
@@ -296,7 +303,6 @@
                                     <h5 class="font-bold text-slate-800 text-sm uppercase tracking-wide">Sciences Fondamentales</h5>
                                     <p class="text-xs text-slate-400 mt-1">Physiques & Chimiques</p>
                                 </div>
-                                <!-- Maths & Numérique -->
                                 <div onclick="event.stopPropagation(); openRessource('maths')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-yellow-400"></div>
                                     <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center mb-3 group-hover/card:bg-yellow-400 group-hover/card:text-white transition-colors">
@@ -305,7 +311,6 @@
                                     <h5 class="font-bold text-slate-800 text-sm uppercase tracking-wide">Maths & Numérique</h5>
                                     <p class="text-xs text-slate-400 mt-1">Outils, Stats, Info</p>
                                 </div>
-                                <!-- Métrologie & Instrumentation -->
                                 <div onclick="event.stopPropagation(); openRessource('metro')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-rose-400"></div>
                                     <div class="w-10 h-10 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center mb-3 group-hover/card:bg-rose-400 group-hover/card:text-white transition-colors">
@@ -314,7 +319,6 @@
                                     <h5 class="font-bold text-slate-800 text-sm uppercase tracking-wide">Métrologie & Instru.</h5>
                                     <p class="text-xs text-slate-400 mt-1">Capteurs, Qualité, Chaîne</p>
                                 </div>
-                                <!-- Matériaux & Analyse -->
                                 <div onclick="event.stopPropagation(); openRessource('materiaux')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-fuchsia-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center mb-3 group-hover/card:bg-fuchsia-500 group-hover/card:text-white transition-colors">
@@ -323,7 +327,6 @@
                                     <h5 class="font-bold text-slate-800 text-sm uppercase tracking-wide">Matériaux & Analyse</h5>
                                     <p class="text-xs text-slate-400 mt-1">Propriétés, Spectro, Vide</p>
                                 </div>
-                                <!-- Culture & Com -->
                                 <div onclick="event.stopPropagation(); openRessource('culture')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-sky-400"></div>
                                     <div class="w-10 h-10 rounded-full bg-sky-50 text-sky-500 flex items-center justify-center mb-3 group-hover/card:bg-sky-400 group-hover/card:text-white transition-colors">
@@ -336,7 +339,6 @@
 
                             <h4 class="text-xl font-bold text-slate-900 mb-8 text-center">Référentiel de Compétences</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                                <!-- Mener (Rouge) -->
                                 <div onclick="event.stopPropagation(); openCompetence('mener')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center mb-3 group-hover/card:bg-red-500 group-hover/card:text-white transition-colors">
@@ -345,7 +347,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Mener</h5>
                                     <p class="text-xs text-slate-500 mt-1">Une campagne de mesures</p>
                                 </div>
-                                <!-- Déployer (Orange) -->
                                 <div onclick="event.stopPropagation(); openCompetence('deployer')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-orange-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-3 group-hover/card:bg-orange-500 group-hover/card:text-white transition-colors">
@@ -354,7 +355,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Déployer</h5>
                                     <p class="text-xs text-slate-500 mt-1">Métrologie & Qualité</p>
                                 </div>
-                                <!-- Mettre en œuvre (Jaune) -->
                                 <div onclick="event.stopPropagation(); openCompetence('oeuvre')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center mb-3 group-hover/card:bg-yellow-500 group-hover/card:text-white transition-colors">
@@ -363,7 +363,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg leading-tight">Mettre en œuvre</h5>
                                     <p class="text-xs text-slate-500 mt-1">Chaîne de mesure</p>
                                 </div>
-                                <!-- Caractériser (Vert) -->
                                 <div onclick="event.stopPropagation(); openCompetence('caracteriser')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
                                     <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3 group-hover/card:bg-emerald-500 group-hover/card:text-white transition-colors">
@@ -372,7 +371,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Caractériser</h5>
                                     <p class="text-xs text-slate-500 mt-1">Grandeurs & Matériaux</p>
                                 </div>
-                                <!-- Définir (Bleu) -->
                                 <div onclick="event.stopPropagation(); openCompetence('definir')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-blue-600"></div>
                                     <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover/card:bg-blue-600 group-hover/card:text-white transition-colors">
@@ -466,7 +464,6 @@
                     <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white box-content shadow-md group-hover:scale-125 transition"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                         <div class="flex items-center gap-4">
-                            <!-- Taille du logo augmentée (w-16 h-16) -->
                             <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-1 shrink-0">
                                 <img src="./images/logo_cnrs.jpg" alt="CNRS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bold text-slate-700\'>C</span>'">
                             </div>
@@ -542,6 +539,7 @@
         </div>
     </section>
 
+    <!-- SECTION COMPETENCES AVEC 10 HARD & SOFT SKILLS -->
     <section id="competences" class="py-24 bg-soft border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-slate-900 mb-16 flex items-center gap-4">
@@ -549,68 +547,74 @@
                 Compétences Techniques
             </h2>
             
-            <!-- Refonte du design : plus raffiné, moins gros -->
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Instrumentation -->
+                <!-- Mesure & Métrologie -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-5">
                         <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                            <i data-lucide="crosshair" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Instrumentation & Élec</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Mesure & Métrologie</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('oscilloscope')">Oscilloscope</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('gbf')">GBF / Multimètre</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('capteurs')">Capteurs</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('aop')">AOP</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('instrumentation')">Instrumentation de Mesure</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('calibration')">Techniques de Calibration</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('metrologie')">Métrologie</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('qualite')">Contrôle de Qualité</span>
                     </div>
                 </div>
 
-                <!-- Chimie -->
+                <!-- Ingénierie & Modélisation -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-5">
                         <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="flask-round" class="w-6 h-6"></i>
+                            <i data-lucide="laptop" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Chimie & Analyse</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Ingénierie & Modélisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('spectro')">Spectroscopie IR</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('chromato')">Chromatographie</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('solutions')">Chimie des solutions</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('analyse_donnees')">Analyse de Données</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('logiciels')">Logiciels de Modélisation</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('plans')">Lecture de Plans et Schémas</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('doc_tech')">Documentation Technique</span>
                     </div>
                 </div>
 
-                <!-- Informatique -->
+                <!-- Laboratoire & Sécurité -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-5">
                         <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Informatique</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Laboratoire & Sécurité</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 transition-colors">Python</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 transition-colors">Matlab</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 transition-colors">PVsyst</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200 transition-colors">Pack Office</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('reparation')">Réparation et Maintenance</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('securite')">Normes de Sécurité</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('spectro')">Spectroscopie IR</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('chromato')">Chromatographie</span>
                     </div>
                 </div>
 
-                <!-- Soft Skills -->
+                <!-- Soft Skills (10 mots-clés compacts) -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-4 mb-5">
                         <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0">
                             <i data-lucide="users" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-yellow-600 transition-colors">Soft Skills</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-yellow-600 transition-colors">Savoir-être (Soft Skills)</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200 transition-colors">Travail d'équipe</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200 transition-colors">Communication</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200 transition-colors">Organisation</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200 transition-colors">Gestion de projet</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('pb')">Résolution de Problèmes</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('detail')">Souci du Détail</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('com')">Communication</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('equipe')">Travail en Équipe</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('adapt')">Adaptabilité</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('temps')">Gestion du Temps</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('critique')">Esprit Critique</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('initiative')">Initiative</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('patience')">Patience</span>
+                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('curiosite')">Curiosité</span>
                     </div>
                 </div>
             </div>
@@ -680,7 +684,6 @@
             </div>
 
             <h2 class="text-4xl font-bold text-slate-900 mb-10">Me Contacter</h2>
-            <!-- Modification ici : 2 colonnes (Email et LinkedIn), plus de téléphone -->
             <div class="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
                 <button onclick="openModal('modal-mail')" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-primary shadow-sm hover:shadow-md">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-primary">
@@ -690,7 +693,7 @@
                 </button>
                 <a href="https://www.linkedin.com/in/marwa-zine-el-abidine-839ba22aa" target="_blank" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-blue-600 shadow-sm hover:shadow-md">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-blue-600">
-                        <i data-lucide="linkedin" class="w-7 h-7"></i>
+                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </div>
                     <span class="text-slate-600 text-lg font-medium group-hover:text-blue-600 transition">LinkedIn</span>
                 </a>
@@ -766,9 +769,8 @@
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-6 relative max-h-[90vh] overflow-y-auto flex flex-col md:flex-row gap-8">
             <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal z-10 bg-white/50 backdrop-blur-md rounded-full p-1"><i data-lucide="x"></i></button>
             
-            <!-- Conteneur image ajusté avec object-contain pour ne pas couper l'affiche -->
-            <div class="w-full md:w-1/2 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
-                <img src="./images/projet_eau.jpg" class="max-h-[60vh] w-auto object-contain rounded-xl shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+            <div class="w-full md:w-1/2 bg-white rounded-2xl flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
+                <img src="./images/projet_eau.jpg" class="max-h-[60vh] w-auto object-contain shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
             </div>
             
             <div class="w-full md:w-1/2 py-4 pr-4 flex flex-col">
@@ -866,7 +868,7 @@
                      <li><strong>Acquisition du signal :</strong> Polarisation et alignement précis d'un phototransistor pour convertir le flux lumineux traversant le doigt en une tension variable proportionnelle à l'opacité sanguine.</li>
                      <li><strong>Filtrage passe-haut :</strong> Dimensionnement et intégration d'une cellule R-C pour bloquer les basses fréquences et supprimer la composante continue (offset) du signal. La fréquence de coupure a été mesurée expérimentalement à 0,34 Hz.</li>
                      <li><strong>Amplification et filtrage passe-bas :</strong> Calcul et application du théorème de Millman pour concevoir un étage combinant l'amplification du signal utile, qui est très faible, et la réduction des bruits haute fréquence, spécifiquement le bruit secteur de 50 Hz. La fréquence de coupure théorique de ce filtre a été calculée à 22,4 Hz.</li>
-                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette (ex. : relevage de la patte non utilisée du transistor) pour minimiser de manière significative les perturbations et le bruit.</li>
+                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette pour minimiser de manière significative les perturbations et le bruit.</li>
                  </ul>
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
@@ -915,7 +917,7 @@
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
                  <ul class="list-disc list-inside space-y-2 marker:text-teal-600 bg-teal-50 p-5 rounded-2xl border border-teal-100">
-                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique, l'équipe n'ayant pas eu le temps matériel d'appliquer le traitement enzymatique à la protéinase K).</li>
+                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique).</li>
                      <li><strong>Observations visuelles :</strong> Les examens microscopiques ont permis d'identifier des fragments et des filaments de la taille d'une centaine de micromètres, ainsi que des micro-organismes naturels comme des copépodes et des algues.</li>
                      <li><strong>Identification des plastiques :</strong> Les spectres obtenus par l'IR-ATR ont mis en évidence des signatures chimiques correspondant très probablement à du PET (Polyéthylène Téréphtalate), du PP (Polypropylène), ainsi que du PE (Polyéthylène) ou du PVC (Polychlorure de vinyle).</li>
                      <li><strong>Bilan global :</strong> L'expérience a confirmé de manière concrète la présence de pollution par les microplastiques dans les eaux marines étudiées et a permis à l'équipe de développer son autonomie sur un protocole scientifique complet.</li>
@@ -933,13 +935,38 @@
         }
         function showDef(term) {
             const defs = {
+                /* Anciennes définitions */
                 'oscilloscope': { title: 'Oscilloscope', text: "Instrument incontournable qui affiche la tension électrique en fonction du temps. Permet d'analyser la forme, la fréquence et l'amplitude d'un signal." },
                 'gbf': { title: 'GBF (Générateur Basse Fréquence)', text: "Source de tension capable de produire des signaux périodiques (sinusoïdaux, carrés, triangles) pour stimuler et tester des circuits électroniques." },
                 'capteurs': { title: 'Capteurs', text: "Dispositifs convertissant une grandeur physique (température, lumière, force...) en un signal électrique mesurable par nos instruments." },
                 'aop': { title: 'AOP (Ampli Opérationnel)', text: "Composant actif polyvalent utilisé pour amplifier un signal, le filtrer, ou réaliser des opérations mathématiques (somme, intégration) en analogique." },
                 'spectro': { title: 'Spectroscopie IR', text: "Technique d'analyse chimique basée sur l'absorption de la lumière infrarouge par les molécules. Permet d'identifier les liaisons chimiques et la nature d'un échantillon." },
                 'chromato': { title: 'Chromatographie', text: "Méthode de séparation des constituants d'un mélange complexe (liquide ou gaz) en les faisant migrer à différentes vitesses sur un support." },
-                'solutions': { title: 'Chimie des solutions', text: "Étude des réactions chimiques en milieu liquide : équilibres acido-basiques (pH), réactions d'oxydoréduction et précipitation." }
+                'solutions': { title: 'Chimie des solutions', text: "Étude des réactions chimiques en milieu liquide : équilibres acido-basiques (pH), réactions d'oxydoréduction et précipitation." },
+                
+                /* Hard Skills ajoutées depuis le cours */
+                'instrumentation': { title: 'Instrumentation de Mesure', text: "Connaissance des instruments de mesure tels que les oscilloscopes, les multimètres, les capteurs, etc." },
+                'calibration': { title: 'Techniques de Calibration', text: "Expérience dans l'étalonnage et l'ajustement des équipements de mesure." },
+                'analyse_donnees': { title: 'Analyse de Données', text: "Compétences en interprétation et analyse de données quantitatives." },
+                'logiciels': { title: 'Logiciels de Modélisation', text: "Maîtrise des logiciels de CAO et de simulation tels que MATLAB, LabVIEW, ou SolidWorks." },
+                'plans': { title: 'Lecture de Plans et Schémas', text: "Capacité à comprendre et interpréter des plans techniques et des schémas électroniques." },
+                'metrologie': { title: 'Métrologie', text: "Connaissance des normes et des méthodes de métrologie." },
+                'reparation': { title: 'Réparation et Maintenance', text: "Savoir-faire en diagnostic et réparation d'équipements de mesure." },
+                'securite': { title: 'Normes de Sécurité', text: "Connaissance des protocoles et des réglementations de sécurité en laboratoire." },
+                'doc_tech': { title: 'Documentation Technique', text: "Compétences en rédaction de rapports techniques et de documentation méthodologique." },
+                'qualite': { title: 'Contrôle de Qualité', text: "Aptitudes à mettre en œuvre des procédures de contrôle qualité pour garantir la précision et la fiabilité des mesures." },
+                
+                /* Soft Skills ajoutées depuis le cours */
+                'pb': { title: 'Résolution de Problèmes', text: "Capacité à identifier et résoudre efficacement les problèmes complexes." },
+                'detail': { title: 'Souci du Détail', text: "Attention minutieuse aux détails pour garantir des mesures précises." },
+                'com': { title: 'Communication', text: "Aptitudes à expliquer des concepts techniques de manière claire et concise." },
+                'equipe': { title: 'Travail en Équipe', text: "Capacité à collaborer efficacement avec d'autres professionnels dans un environnement multidisciplinaire." },
+                'adapt': { title: 'Adaptabilité', text: "Flexibilité pour s'adapter rapidement aux nouvelles technologies et méthodes." },
+                'temps': { title: 'Gestion du Temps', text: "Compétences en organisation pour gérer plusieurs tâches et projets simultanément." },
+                'critique': { title: 'Esprit Critique', text: "Aptitude à évaluer l'information de manière critique pour prendre des décisions informées." },
+                'initiative': { title: 'Initiative', text: "Proactivité dans l'amélioration des processus et l'innovation." },
+                'patience': { title: 'Patience', text: "Capacité à rester calme et concentré dans des situations de pression ou lors de projets complexes." },
+                'curiosite': { title: 'Curiosité', text: "Désir d'apprendre continuellement et de se tenir au courant des dernières avancées technologiques." }
             };
             const data = defs[term];
             if(data) {
