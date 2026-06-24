@@ -188,7 +188,6 @@
 
                     <!-- 2. Journée de l'eau (En haut à droite) -->
                     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                        <!-- Ajustement de l'image pour qu'elle ne soit pas coupée (object-contain + fond blanc) -->
                         <div class="h-56 bg-white relative overflow-hidden flex items-center justify-center p-4">
                             <img src="./images/projet_eau.jpg" class="h-full w-auto object-contain group-hover:scale-105 transition duration-700 drop-shadow-md" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm z-10">S3-S4 2025</div>
@@ -220,7 +219,6 @@
                                 <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-ppg')">
                                     <i data-lucide="eye" class="w-4 h-4"></i> Détails
                                 </button>
-                                <!-- Ajout du bouton Rapport -->
                                 <a href="Rapport_Capteur_PPG.pdf" target="_blank" class="flex-1 py-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
                                     <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
                                 </a>
@@ -241,7 +239,6 @@
                                 <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-teal-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-micro')">
                                     <i data-lucide="eye" class="w-4 h-4"></i> Détails
                                 </button>
-                                <!-- Modification ici : Flyer au lieu de Rapport -->
                                 <a href="Flyer_Micro_Plastiques.pdf" target="_blank" class="flex-1 py-3 bg-teal-50 text-teal-600 rounded-xl hover:bg-teal-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
                                     <i data-lucide="file-image" class="w-4 h-4"></i> Flyer
                                 </a>
@@ -384,7 +381,7 @@
                     </div>
                 </div>
 
-                <!-- Licence Physique (Accordéon) -->
+                <!-- Licence Physique -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition cursor-pointer group" onclick="toggleSection('edu-licence', 'icon-licence')">
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
                         <div class="w-24 h-24 bg-purple-50 rounded-2xl border border-purple-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
@@ -588,51 +585,60 @@
             </h2>
             
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Mesure & Métrologie -->
+                <!-- Instrumentation & Élec -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="crosshair" class="w-6 h-6"></i>
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Mesure & Métrologie</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Instrumentation & Élec</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('oscilloscope')">Oscilloscope</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('gbf')">GBF / Multimètre</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('capteurs')">Capteurs</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('aop')">AOP</span>
                         <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('instrumentation')">Instrumentation de Mesure</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('calibration')">Techniques de Calibration</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('calibration')">Calibration</span>
                         <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('metrologie')">Métrologie</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('qualite')">Contrôle de Qualité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('qualite')">Contrôle Qualité</span>
                     </div>
                 </div>
 
-                <!-- Ingénierie & Modélisation -->
-                <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="laptop" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Ingénierie & Modélisation</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('analyse_donnees')">Analyse de Données</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('logiciels')">Logiciels de Modélisation</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('plans')">Lecture de Plans et Schémas</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('doc_tech')">Documentation Technique</span>
-                    </div>
-                </div>
-
-                <!-- Laboratoire & Sécurité -->
+                <!-- Informatique & Modélisation -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Laboratoire & Sécurité</h3>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Informatique & Modélisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('reparation')">Réparation et Maintenance</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('securite')">Normes de Sécurité</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('spectro')">Spectroscopie IR</span>
-                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('chromato')">Chromatographie</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('python')">Python</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('matlab')">Matlab</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('pvsyst')">PVsyst</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('office')">Pack Office</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('analyse_donnees')">Analyse de Données</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('logiciels')">Logiciels Modélisation</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('plans')">Lecture Plans & Schémas</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('doc_tech')">Doc Technique</span>
+                    </div>
+                </div>
+
+                <!-- Chimie, Labo & Sécurité -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Chimie, Labo & Sécurité</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('spectro')">Spectroscopie IR</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('chromato')">Chromatographie</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('electrochimie')">Électrochimie</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('securite')">Normes de Sécurité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('reparation')">Maintenance & Rép.</span>
                     </div>
                 </div>
 
@@ -733,7 +739,7 @@
                 </button>
                 <a href="https://www.linkedin.com/in/marwa-zine-el-abidine-839ba22aa" target="_blank" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-blue-600 shadow-sm hover:shadow-md">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-blue-600">
-                        <!-- Vrai logo vectoriel LinkedIn (SVG intégré) -->
+                        <!-- Vrai logo vectoriel LinkedIn -->
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
@@ -916,7 +922,7 @@
                      <li><strong>Acquisition du signal :</strong> Polarisation et alignement précis d'un phototransistor pour convertir le flux lumineux traversant le doigt en une tension variable proportionnelle à l'opacité sanguine.</li>
                      <li><strong>Filtrage passe-haut :</strong> Dimensionnement et intégration d'une cellule R-C pour bloquer les basses fréquences et supprimer la composante continue (offset) du signal. La fréquence de coupure a été mesurée expérimentalement à 0,34 Hz.</li>
                      <li><strong>Amplification et filtrage passe-bas :</strong> Calcul et application du théorème de Millman pour concevoir un étage combinant l'amplification du signal utile, qui est très faible, et la réduction des bruits haute fréquence, spécifiquement le bruit secteur de 50 Hz. La fréquence de coupure théorique de ce filtre a été calculée à 22,4 Hz.</li>
-                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette (ex. : relevage de la patte non utilisée du transistor) pour minimiser de manière significative les perturbations et le bruit.</li>
+                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette pour minimiser de manière significative les perturbations et le bruit.</li>
                  </ul>
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
@@ -965,7 +971,7 @@
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
                  <ul class="list-disc list-inside space-y-2 marker:text-teal-600 bg-teal-50 p-5 rounded-2xl border border-teal-100">
-                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique, l'équipe n'ayant pas eu le temps matériel d'appliquer le traitement enzymatique à la protéinase K).</li>
+                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique).</li>
                      <li><strong>Observations visuelles :</strong> Les examens microscopiques ont permis d'identifier des fragments et des filaments de la taille d'une centaine de micromètres, ainsi que des micro-organismes naturels comme des copépodes et des algues.</li>
                      <li><strong>Identification des plastiques :</strong> Les spectres obtenus par l'IR-ATR ont mis en évidence des signatures chimiques correspondant très probablement à du PET (Polyéthylène Téréphtalate), du PP (Polypropylène), ainsi que du PE (Polyéthylène) ou du PVC (Polychlorure de vinyle).</li>
                      <li><strong>Bilan global :</strong> L'expérience a confirmé de manière concrète la présence de pollution par les microplastiques dans les eaux marines étudiées et a permis à l'équipe de développer son autonomie sur un protocole scientifique complet.</li>
@@ -990,26 +996,31 @@
                 'spectro': { title: 'Spectroscopie IR', text: "Technique d'analyse chimique basée sur l'absorption de la lumière infrarouge par les molécules. Permet d'identifier les liaisons chimiques et la nature d'un échantillon." },
                 'chromato': { title: 'Chromatographie', text: "Méthode de séparation des constituants d'un mélange complexe (liquide ou gaz) en les faisant migrer à différentes vitesses sur un support." },
                 'solutions': { title: 'Chimie des solutions', text: "Étude des réactions chimiques en milieu liquide : équilibres acido-basiques (pH), réactions d'oxydoréduction et précipitation." },
-                'instrumentation': { title: 'Instrumentation de Mesure', text: "Connaissance des instruments de mesure tels que les oscilloscopes, les multimètres, les capteurs, etc." },
-                'calibration': { title: 'Techniques de Calibration', text: "Expérience dans l'étalonnage et l'ajustement des équipements de mesure." },
-                'analyse_donnees': { title: 'Analyse de Données', text: "Compétences en interprétation et analyse de données quantitatives." },
-                'logiciels': { title: 'Logiciels de Modélisation', text: "Maîtrise des logiciels de CAO et de simulation tels que MATLAB, LabVIEW, ou SolidWorks." },
-                'plans': { title: 'Lecture de Plans et Schémas', text: "Capacité à comprendre et interpréter des plans techniques et des schémas électroniques." },
-                'metrologie': { title: 'Métrologie', text: "Connaissance des normes et des méthodes de métrologie." },
-                'reparation': { title: 'Réparation et Maintenance', text: "Savoir-faire en diagnostic et réparation d'équipements de mesure." },
-                'securite': { title: 'Normes de Sécurité', text: "Connaissance des protocoles et des réglementations de sécurité en laboratoire." },
-                'doc_tech': { title: 'Documentation Technique', text: "Compétences en rédaction de rapports techniques et de documentation méthodologique." },
-                'qualite': { title: 'Contrôle de Qualité', text: "Aptitudes à mettre en œuvre des procédures de contrôle qualité pour garantir la précision et la fiabilité des mesures." },
-                'pb': { title: 'Résolution de Problèmes', text: "Capacité à identifier et résoudre efficacement les problèmes complexes." },
-                'detail': { title: 'Souci du Détail', text: "Attention minutieuse aux détails pour garantir des mesures précises." },
-                'com': { title: 'Communication', text: "Aptitudes à expliquer des concepts techniques de manière claire et concise." },
-                'equipe': { title: 'Travail en Équipe', text: "Capacité à collaborer efficacement avec d'autres professionnels dans un environnement multidisciplinaire." },
-                'adapt': { title: 'Adaptabilité', text: "Flexibilité pour s'adapter rapidement aux nouvelles technologies et méthodes." },
-                'temps': { title: 'Gestion du Temps', text: "Compétences en organisation pour gérer plusieurs tâches et projets simultanément." },
-                'critique': { title: 'Esprit Critique', text: "Aptitude à évaluer l'information de manière critique pour prendre des décisions informées." },
-                'initiative': { title: 'Initiative', text: "Proactivité dans l'amélioration des processus et l'innovation." },
-                'patience': { title: 'Patience', text: "Capacité à rester calme et concentré dans des situations de pression ou lors de projets complexes." },
-                'curiosite': { title: 'Curiosité', text: "Désir d'apprendre continuellement et de se tenir au courant des dernières avancées technologiques." }
+                'instrumentation': { title: 'Instrumentation de Mesure', text: "Connaissance approfondie des instruments de mesure tels que les oscilloscopes, les multimètres et divers capteurs." },
+                'calibration': { title: 'Techniques de Calibration', text: "Expérience pratique dans l'étalonnage et l'ajustement minutieux des équipements de mesure en laboratoire." },
+                'analyse_donnees': { title: 'Analyse de Données', text: "Compétences en interprétation et analyse rigoureuse de données quantitatives et expérimentales." },
+                'logiciels': { title: 'Logiciels de Modélisation', text: "Maîtrise des logiciels d'ingénierie et de conception assistée par ordinateur." },
+                'plans': { title: 'Lecture de Plans et Schémas', text: "Capacité à comprendre, analyser et interpréter des plans techniques ainsi que des schémas de circuits électroniques." },
+                'metrologie': { title: 'Métrologie', text: "Connaissance approfondie des normes fondamentales et des méthodes de calcul d'incertitude en métrologie." },
+                'reparation': { title: 'Réparation et Maintenance', text: "Savoir-faire technique en diagnostic de pannes et réparation de base d'équipements de mesure." },
+                'securite': { title: 'Normes de Sécurité', text: "Connaissance stricte des protocoles et des réglementations de sécurité lors des manipulations en laboratoire." },
+                'doc_tech': { title: 'Documentation Technique', text: "Compétences professionnelles en rédaction de rapports techniques, de fiches de synthèse et de documentation méthodologique." },
+                'qualite': { title: 'Contrôle de Qualité', text: "Aptitudes à concevoir et mettre en œuvre des procédures de contrôle qualité pour garantir la précision absolue et la fiabilité des mesures." },
+                'pb': { title: 'Résolution de Problèmes', text: "Forte capacité à identifier l'origine des anomalies et à résoudre efficacement des problèmes complexes sur le terrain." },
+                'detail': { title: 'Souci du Détail', text: "Attention extrêmement minutieuse aux détails, indispensable pour garantir des mesures et des résultats précis." },
+                'com': { title: 'Communication', text: "Aptitude avérée à vulgariser et expliquer des concepts techniques et scientifiques de manière claire, à l'oral comme à l'écrit." },
+                'equipe': { title: 'Travail en Équipe', text: "Capacité à collaborer de façon constructive et synergique avec d'autres professionnels dans un environnement multidisciplinaire." },
+                'adapt': { title: 'Adaptabilité', text: "Flexibilité et agilité d'apprentissage pour s'adapter très rapidement aux nouvelles technologies, protocoles et méthodes de travail." },
+                'temps': { title: 'Gestion du Temps', text: "Excellentes compétences en organisation permettant de gérer et prioriser plusieurs tâches et projets simultanément dans le respect des délais." },
+                'critique': { title: 'Esprit Critique', text: "Aptitude à analyser et évaluer toute information de manière objective et critique pour prendre des décisions rationnelles et informées." },
+                'initiative': { title: 'Initiative', text: "Forte proactivité dans la proposition d'améliorations des processus, l'autonomie sur les projets et la recherche d'innovation." },
+                'patience': { title: 'Patience', text: "Capacité éprouvée à rester calme, concentrée et méthodique lors des expériences de longue durée ou dans des situations de pression." },
+                'curiosite': { title: 'Curiosité', text: "Désir profond d'apprendre continuellement et de réaliser une veille active sur les dernières avancées technologiques et environnementales." },
+                'electrochimie': { title: 'Électrochimie', text: "Étude des phénomènes chimiques couplés aux échanges d'électrons. Maîtrise des techniques d'analyse comme la conductimétrie, la pH-métrie et les titrages potentiométriques." },
+                'python': { title: 'Python', text: "Langage de programmation polyvalent. Très utilisé en laboratoire pour le traitement massif de données, l'automatisation des calculs et la modélisation scientifique." },
+                'matlab': { title: 'MATLAB', text: "Plateforme de programmation et de calcul numérique, idéale pour l'analyse de données complexes, le traitement du signal et la simulation de systèmes physiques." },
+                'pvsyst': { title: 'PVsyst', text: "Logiciel d'ingénierie standard de l'industrie pour l'architecture, la simulation détaillée et l'analyse de rentabilité des systèmes d'énergie solaire photovoltaïque." },
+                'office': { title: 'Pack Office', text: "Excellente maîtrise d'Excel pour le traitement de données (macros, graphiques complexes), de Word pour la rédaction de rapports techniques, et de PowerPoint pour les présentations orales." }
             };
             const data = defs[term];
             if(data) {
