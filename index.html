@@ -459,7 +459,7 @@
             </h2>
             <div class="relative border-l-2 border-slate-200 ml-3 md:ml-6 space-y-16">
                 
-                <!-- Stage CNRS -->
+                <!-- Stage CNRS (Accordéon enrichi) -->
                 <div class="relative pl-8 md:pl-12 group cursor-pointer" onclick="toggleSection('exp-cnrs', 'icon-cnrs')">
                     <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white box-content shadow-md group-hover:scale-125 transition"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
@@ -472,14 +472,55 @@
                         <span class="text-sm text-emerald-700 font-mono bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0">Avril - Juin 2026</span>
                     </div>
                     <div class="text-slate-500 font-medium mb-4 pl-[5.5rem]">Laboratoire ICMPE (CNRS-UPEC) <i data-lucide="chevron-down" id="icon-cnrs" class="w-4 h-4 inline-block ml-2 transition-transform duration-300"></i></div>
-                    <div id="exp-cnrs" class="accordion-content bg-slate-50 p-6 rounded-2xl border border-slate-100 ml-[5.5rem]">
-                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-2 mb-4">
-                            <li>Synthèse et caractérisation de membranes polymères composites (PVDF/Kaolinite).</li>
-                            <li>Formulation par inversion de phase et analyses physico-chimiques (FTIR, DRX, DSC, MEB).</li>
-                            <li>Tests de propriétés mécaniques, perméabilité hydraulique et rétention de métaux lourds (ICP-OES).</li>
-                        </ul>
-                        <div class="mt-4">
-                            <img src="./images/projet_icmpe.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                    
+                    <div id="exp-cnrs" class="accordion-content bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100 ml-[5.5rem]">
+                        <div class="space-y-5 text-slate-600 leading-relaxed text-sm">
+                            <h4 class="font-bold text-slate-800 text-base">Objectifs du projet</h4>
+                            <ul class="list-disc list-inside space-y-2 marker:text-emerald-500">
+                                <li>Développer et caractériser des membranes composites polymériques en incorporant de l'argile kaolinite (DD3) dans une matrice de PVDF (polyfluorure de vinylidène).</li>
+                                <li>Améliorer les performances de filtration pour l'élimination des métaux lourds (ions Mg²⁺ et Zn²⁺) présents dans les eaux usées industrielles.</li>
+                                <li>Optimiser un compromis entre la perméabilité hydraulique et la résistance mécanique des membranes.</li>
+                                <li>Évaluer l'influence du taux d'argile sur la structure, la morphologie et les propriétés fonctionnelles du matériau final.</li>
+                            </ul>
+
+                            <h4 class="font-bold text-slate-800 text-base mt-6">Rôle et Missions de la stagiaire</h4>
+                            <ul class="list-disc list-inside space-y-2 marker:text-emerald-500">
+                                <li><strong>Formulation et synthèse :</strong> Préparation de quatre formulations de membranes (M0, M025, M05, M1) avec des teneurs en argile croissantes, incluant les étapes de pesée, de dissolution (24h) et de dégazage.</li>
+                                <li><strong>Élaboration membranaire :</strong> Réalisation de l'étalement des films par inversion de phase (NIPS) avec une épaisseur contrôlée (700 µm) et mise en œuvre des étapes de consolidation dans des bains d'eau distillée.</li>
+                                <li><strong>Caractérisation expérimentale :</strong> Conduite d'une batterie d'analyses pour caractériser les propriétés rhéologiques, structurales, mécaniques et hydrauliques des membranes.</li>
+                                <li><strong>Analyse de performance :</strong> Évaluation de la capacité de rétention des ions métalliques et de la résistance chimique des membranes en milieu acide et basique.</li>
+                            </ul>
+
+                            <h4 class="font-bold text-slate-800 text-base mt-6">Méthodologies utilisées</h4>
+                            <ul class="list-disc list-inside space-y-2 marker:text-emerald-500 bg-white p-5 rounded-2xl border border-slate-100">
+                                <li><strong>Inversion de phase (NIPS) :</strong> Immersion du film (PVDF + argile dans le NMP) dans l'eau distillée pour induire la précipitation du polymère et la formation de la structure poreuse.</li>
+                                <li><strong>Analyses structurales et chimiques :</strong> FTIR (Vérification de la structure chimique et confirmation que l'incorporation de l'argile reste physique), DRX (Analyse de l'état cristallin), DSC (Comportement thermique et cristallinité).</li>
+                                <li><strong>Analyses morphologiques et de surface :</strong> Utilisation de la MEB (Microscopie Électronique à Balayage) pour observer la porosité et mesures d'angle de contact pour quantifier la mouillabilité.</li>
+                                <li><strong>Essais mécaniques :</strong> Tests de traction jusqu'à rupture pour mesurer le module de Young et la ductilité.</li>
+                                <li><strong>Performances hydrauliques :</strong> Mesures de perméabilité à l'eau sur un banc de filtration et quantification des ions métalliques par ICP-MS.</li>
+                            </ul>
+
+                            <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus</h4>
+                            <ul class="list-disc list-inside space-y-2 marker:text-teal-600 bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
+                                <li><strong>Structure :</strong> L'ajout de kaolinite ne modifie pas la nature chimique du PVDF, mais réduit sa cristallinité.</li>
+                                <li><strong>Morphologie :</strong> L'incorporation d'argile favorise la densification de la membrane et réduit la taille des pores ; la teneur à 0,5% (M05) offre la morphologie la plus homogène.</li>
+                                <li><strong>Propriétés mécaniques :</strong> Une évolution non linéaire a été constatée ; le dosage M05 offre le meilleur équilibre entre flexibilité et résistance, tandis que des charges plus fortes (M1) augmentent la rigidité au détriment de la ductilité.</li>
+                                <li><strong>Performances de filtration :</strong> Une amélioration nette de la perméabilité a été observée avec l'ajout d'argile (atteignant 122 L.h⁻¹.m⁻².bar⁻¹ pour la membrane M1).</li>
+                                <li><strong>Rétention des métaux :</strong> La membrane M1 présente les meilleures performances avec un taux de rétention de 85% pour le zinc (Zn²⁺) et de 53% pour le magnésium (Mg²⁺).</li>
+                                <li><strong>Conclusion :</strong> La formulation M05 est identifiée comme optimale pour concilier performances hydrauliques et stabilité mécanique en vue d'une application industrielle de filtration.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Bouton et Image -->
+                        <div class="mt-8 flex flex-col sm:flex-row gap-6 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <img src="./images/projet_icmpe.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                            </div>
+                            <div class="w-full sm:w-1/2 flex justify-center">
+                                <a href="Rapport_Stage_CNRS.pdf" target="_blank" onclick="event.stopPropagation();" class="inline-flex py-3 px-6 bg-emerald-50 text-emerald-600 rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 items-center justify-center gap-2 font-medium border border-emerald-100">
+                                    <i data-lucide="file-text" class="w-5 h-5"></i> Visualiser le rapport
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -539,7 +580,6 @@
         </div>
     </section>
 
-    <!-- SECTION COMPETENCES AVEC 10 HARD & SOFT SKILLS -->
     <section id="competences" class="py-24 bg-soft border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-slate-900 mb-16 flex items-center gap-4">
@@ -550,71 +590,71 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Mesure & Métrologie -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-5">
+                    <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                             <i data-lucide="crosshair" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Mesure & Métrologie</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('instrumentation')">Instrumentation de Mesure</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('calibration')">Techniques de Calibration</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('metrologie')">Métrologie</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('qualite')">Contrôle de Qualité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('instrumentation')">Instrumentation de Mesure</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('calibration')">Techniques de Calibration</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('metrologie')">Métrologie</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200" onclick="showDef('qualite')">Contrôle de Qualité</span>
                     </div>
                 </div>
 
                 <!-- Ingénierie & Modélisation -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-5">
+                    <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                             <i data-lucide="laptop" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Ingénierie & Modélisation</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('analyse_donnees')">Analyse de Données</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('logiciels')">Logiciels de Modélisation</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('plans')">Lecture de Plans et Schémas</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('doc_tech')">Documentation Technique</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('analyse_donnees')">Analyse de Données</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('logiciels')">Logiciels de Modélisation</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('plans')">Lecture de Plans et Schémas</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200" onclick="showDef('doc_tech')">Documentation Technique</span>
                     </div>
                 </div>
 
                 <!-- Laboratoire & Sécurité -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-5">
+                    <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
                             <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Laboratoire & Sécurité</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('reparation')">Réparation et Maintenance</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('securite')">Normes de Sécurité</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('spectro')">Spectroscopie IR</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('chromato')">Chromatographie</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('reparation')">Réparation et Maintenance</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('securite')">Normes de Sécurité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('spectro')">Spectroscopie IR</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-purple-50 hover:text-purple-600 hover:border-purple-200" onclick="showDef('chromato')">Chromatographie</span>
                     </div>
                 </div>
 
-                <!-- Soft Skills (10 mots-clés compacts) -->
+                <!-- Soft Skills -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col">
-                    <div class="flex items-center gap-4 mb-5">
+                    <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0">
                             <i data-lucide="users" class="w-6 h-6"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-800 group-hover:text-yellow-600 transition-colors">Savoir-être (Soft Skills)</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('pb')">Résolution de Problèmes</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('detail')">Souci du Détail</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('com')">Communication</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('equipe')">Travail en Équipe</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('adapt')">Adaptabilité</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('temps')">Gestion du Temps</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('critique')">Esprit Critique</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('initiative')">Initiative</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('patience')">Patience</span>
-                        <span class="px-3 py-1.5 bg-slate-50 rounded-full text-slate-600 font-medium text-[13px] border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('curiosite')">Curiosité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('pb')">Résolution de Problèmes</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('detail')">Souci du Détail</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('com')">Communication</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('equipe')">Travail en Équipe</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('adapt')">Adaptabilité</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('temps')">Gestion du Temps</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('critique')">Esprit Critique</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('initiative')">Initiative</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('patience')">Patience</span>
+                        <span class="px-4 py-2 bg-slate-50 rounded-full text-slate-600 font-medium text-sm border border-slate-200 interactive-term hover:bg-yellow-50 hover:text-yellow-600 hover:border-yellow-200" onclick="showDef('curiosite')">Curiosité</span>
                     </div>
                 </div>
             </div>
@@ -693,7 +733,7 @@
                 </button>
                 <a href="https://www.linkedin.com/in/marwa-zine-el-abidine-839ba22aa" target="_blank" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-blue-600 shadow-sm hover:shadow-md">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-blue-600">
-                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <i data-lucide="linkedin" class="w-7 h-7"></i>
                     </div>
                     <span class="text-slate-600 text-lg font-medium group-hover:text-blue-600 transition">LinkedIn</span>
                 </a>
@@ -769,8 +809,8 @@
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-6 relative max-h-[90vh] overflow-y-auto flex flex-col md:flex-row gap-8">
             <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal z-10 bg-white/50 backdrop-blur-md rounded-full p-1"><i data-lucide="x"></i></button>
             
-            <div class="w-full md:w-1/2 bg-white rounded-2xl flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
-                <img src="./images/projet_eau.jpg" class="max-h-[60vh] w-auto object-contain shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+            <div class="w-full md:w-1/2 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
+                <img src="./images/projet_eau.jpg" class="max-h-[60vh] w-auto object-contain rounded-xl shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
             </div>
             
             <div class="w-full md:w-1/2 py-4 pr-4 flex flex-col">
@@ -868,7 +908,7 @@
                      <li><strong>Acquisition du signal :</strong> Polarisation et alignement précis d'un phototransistor pour convertir le flux lumineux traversant le doigt en une tension variable proportionnelle à l'opacité sanguine.</li>
                      <li><strong>Filtrage passe-haut :</strong> Dimensionnement et intégration d'une cellule R-C pour bloquer les basses fréquences et supprimer la composante continue (offset) du signal. La fréquence de coupure a été mesurée expérimentalement à 0,34 Hz.</li>
                      <li><strong>Amplification et filtrage passe-bas :</strong> Calcul et application du théorème de Millman pour concevoir un étage combinant l'amplification du signal utile, qui est très faible, et la réduction des bruits haute fréquence, spécifiquement le bruit secteur de 50 Hz. La fréquence de coupure théorique de ce filtre a été calculée à 22,4 Hz.</li>
-                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette pour minimiser de manière significative les perturbations et le bruit.</li>
+                     <li><strong>Caractérisation et optimisation :</strong> Utilisation d'un oscilloscope et d'un générateur basses fréquences (GBF) pour caractériser les composants, mesurer les gains et relever les fréquences de coupure. Optimisation matérielle sur la plaquette (ex. : relevage de la patte non utilisée du transistor) pour minimiser de manière significative les perturbations et le bruit.</li>
                  </ul>
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
@@ -917,7 +957,7 @@
 
                  <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
                  <ul class="list-disc list-inside space-y-2 marker:text-teal-600 bg-teal-50 p-5 rounded-2xl border border-teal-100">
-                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique).</li>
+                     <li><strong>Concentrations massiques :</strong> Le calcul des concentrations a révélé 6,744 g/L à Fort La Latte, 7,912 g/L aux Ébihens et 3,68 g/L dans la baie de Saint-Malo. La concentration plus faible dans le port a été hypothétiquement attribuée aux courants marins. (À noter : ces masses incluaient également de la matière organique, l'équipe n'ayant pas eu le temps matériel d'appliquer le traitement enzymatique à la protéinase K).</li>
                      <li><strong>Observations visuelles :</strong> Les examens microscopiques ont permis d'identifier des fragments et des filaments de la taille d'une centaine de micromètres, ainsi que des micro-organismes naturels comme des copépodes et des algues.</li>
                      <li><strong>Identification des plastiques :</strong> Les spectres obtenus par l'IR-ATR ont mis en évidence des signatures chimiques correspondant très probablement à du PET (Polyéthylène Téréphtalate), du PP (Polypropylène), ainsi que du PE (Polyéthylène) ou du PVC (Polychlorure de vinyle).</li>
                      <li><strong>Bilan global :</strong> L'expérience a confirmé de manière concrète la présence de pollution par les microplastiques dans les eaux marines étudiées et a permis à l'équipe de développer son autonomie sur un protocole scientifique complet.</li>
@@ -935,7 +975,6 @@
         }
         function showDef(term) {
             const defs = {
-                /* Anciennes définitions */
                 'oscilloscope': { title: 'Oscilloscope', text: "Instrument incontournable qui affiche la tension électrique en fonction du temps. Permet d'analyser la forme, la fréquence et l'amplitude d'un signal." },
                 'gbf': { title: 'GBF (Générateur Basse Fréquence)', text: "Source de tension capable de produire des signaux périodiques (sinusoïdaux, carrés, triangles) pour stimuler et tester des circuits électroniques." },
                 'capteurs': { title: 'Capteurs', text: "Dispositifs convertissant une grandeur physique (température, lumière, force...) en un signal électrique mesurable par nos instruments." },
@@ -943,8 +982,6 @@
                 'spectro': { title: 'Spectroscopie IR', text: "Technique d'analyse chimique basée sur l'absorption de la lumière infrarouge par les molécules. Permet d'identifier les liaisons chimiques et la nature d'un échantillon." },
                 'chromato': { title: 'Chromatographie', text: "Méthode de séparation des constituants d'un mélange complexe (liquide ou gaz) en les faisant migrer à différentes vitesses sur un support." },
                 'solutions': { title: 'Chimie des solutions', text: "Étude des réactions chimiques en milieu liquide : équilibres acido-basiques (pH), réactions d'oxydoréduction et précipitation." },
-                
-                /* Hard Skills ajoutées depuis le cours */
                 'instrumentation': { title: 'Instrumentation de Mesure', text: "Connaissance des instruments de mesure tels que les oscilloscopes, les multimètres, les capteurs, etc." },
                 'calibration': { title: 'Techniques de Calibration', text: "Expérience dans l'étalonnage et l'ajustement des équipements de mesure." },
                 'analyse_donnees': { title: 'Analyse de Données', text: "Compétences en interprétation et analyse de données quantitatives." },
@@ -955,8 +992,6 @@
                 'securite': { title: 'Normes de Sécurité', text: "Connaissance des protocoles et des réglementations de sécurité en laboratoire." },
                 'doc_tech': { title: 'Documentation Technique', text: "Compétences en rédaction de rapports techniques et de documentation méthodologique." },
                 'qualite': { title: 'Contrôle de Qualité', text: "Aptitudes à mettre en œuvre des procédures de contrôle qualité pour garantir la précision et la fiabilité des mesures." },
-                
-                /* Soft Skills ajoutées depuis le cours */
                 'pb': { title: 'Résolution de Problèmes', text: "Capacité à identifier et résoudre efficacement les problèmes complexes." },
                 'detail': { title: 'Souci du Détail', text: "Attention minutieuse aux détails pour garantir des mesures précises." },
                 'com': { title: 'Communication', text: "Aptitudes à expliquer des concepts techniques de manière claire et concise." },
