@@ -53,15 +53,6 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         
-        .tech-badge {
-            @apply px-3 py-1.5 bg-slate-50 rounded-md text-xs font-mono text-slate-600 border border-slate-200 transition-all duration-300;
-        }
-        
-        /* Termes interactifs soulignés */
-        .interactive-term {
-            @apply cursor-pointer relative font-medium transition-all duration-300;
-        }
-        
         /* Modal Styles */
         .modal {
             transition: opacity 0.3s ease-in-out, visibility 0.3s;
@@ -70,7 +61,7 @@
             z-index: 1000;
             position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             display: flex; align-items: center; justify-content: center;
-            background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); /* Fond modale très clair et flou */
+            background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px);
         }
         .modal.active { opacity: 1; visibility: visible; }
         .modal-content {
@@ -96,7 +87,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3 group cursor-pointer">
-                    <!-- Logo : Fond Bleu clair, icone bleue -->
                     <div class="p-2 bg-blue-50 rounded-xl text-primary transition-colors duration-300 border border-blue-100">
                         <i data-lucide="microscope" class="w-5 h-5"></i>
                     </div>
@@ -136,13 +126,10 @@
 
     <!-- Hero Section -->
     <section id="accueil" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-white">
-        <!-- Background Image with Stronger Visibility -->
         <div class="absolute inset-0 z-0">
-            <!-- Modification ici : opacity-60 pour plus de visibilité -->
             <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop"
                  alt="Laboratoire background"
                  class="w-full h-full object-cover opacity-60 select-none scale-105">
-            <!-- Overlay plus léger (white/40) pour laisser passer l'image -->
             <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-soft via-transparent to-transparent"></div>
         </div>
@@ -155,8 +142,8 @@
                 Étudiante en <span class="text-primary font-semibold">Mesures Physiques</span><br>
                 <span class="text-accent font-semibold text-xl md:text-2xl mt-2 block">Parcours Mesures et Analyses Environnementales (MAE)</span>
             </h2>
-            <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-10 leading-relaxed font-light font-medium">
-                Actuellement en 2ème année de BUT MP. Passionnée par l'instrumentation, l'analyse environnementale et la conception de systèmes de mesure.
+            <p class="max-w-3xl mx-auto text-lg text-slate-600 mb-10 leading-relaxed font-medium">
+                Actuellement en deuxième année de BUT Mesures Physiques, je suis spécialisée dans le parcours Mesures et Analyses Environnementales (MAE). Sensible aux défis écologiques actuels et particulièrement intéressée par l'optimisation énergétique ainsi que le contrôle de la qualité de l'eau et de l'air, je suis à la recherche d'une alternance de 12 mois pour ma troisième année, à compter de la rentrée 2026. Mon objectif est de mettre ma rigueur scientifique, mon esprit d'analyse et mes connaissances techniques au service de vos projets de transition ou de suivi environnemental.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-full font-medium transition flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:scale-105 duration-300">
@@ -177,30 +164,72 @@
                 Projets Réalisés
             </h2>
 
-            <!-- PROJETS S3-S4 -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-slate-800 mb-8 pl-4 border-l-4 border-primary">Projets 2ème Année (BUT 2)</h3>
+                
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Journée de l'eau -->
                     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
                         <div class="h-64 bg-slate-50 relative overflow-hidden">
-                            <!-- NOTE: Ajout de ./ pour forcer le chemin relatif -->
                             <img src="./images/projet_eau.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">S3-S4 2025</div>
                         </div>
                         <div class="p-8 flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition mb-3">Journée Mondiale de l'Eau</h3>
-                            <p class="text-slate-500 text-sm mb-6 leading-relaxed">Organisation complète d'un événement de sensibilisation à l'UPEC. Gestion de projet, communication et animation scientifique.</p>
-                            <div class="mt-auto">
-                                <button class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium" onclick="openModal('modal-eau')">
+                            <p class="text-slate-500 text-sm mb-6 leading-relaxed">Organisation d'un événement de sensibilisation à l'UPEC : conférences, logistique et budget participatif.</p>
+                            <div class="mt-auto flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-eau')">
                                     <i data-lucide="eye" class="w-4 h-4"></i> Détails
                                 </button>
+                                <a href="Rapport_Journee_Eau.pdf" target="_blank" class="flex-1 py-3 bg-blue-50 text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Micro-plastiques (Déplacé ici) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <div class="h-64 bg-slate-50 relative overflow-hidden">
+                            <img src="./images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-accent shadow-sm">S3 2024</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent transition mb-3">Analyse Micro-Plastiques</h3>
+                            <p class="text-slate-500 text-sm mb-6">Collecte en mer et caractérisation en laboratoire (Spectroscopie IR, Chromatographie) dans le cadre de la Régate des IUT.</p>
+                            <div class="mt-auto flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-micro')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <a href="Rapport_Micro_Plastiques.pdf" target="_blank" class="flex-1 py-3 bg-green-50 text-accent rounded-xl hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panneaux Solaires (Nouveau) -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                        <div class="h-64 bg-slate-50 relative overflow-hidden">
+                            <img src="./images/projet_solaire.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1509391366360-12009a341e97?q=80&w=2070&auto=format&fit=crop'">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-yellow-600 shadow-sm">S4 2026</div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-yellow-500 transition mb-3">Installation Photovoltaïque</h3>
+                            <p class="text-slate-500 text-sm mb-6">Dimensionnement d'une installation solaire sur le lycée Kléber, calcul de rendement et évaluation économique via PVsyst.</p>
+                            <div class="mt-auto flex gap-2">
+                                <button class="flex-1 py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm border border-slate-100" onclick="openModal('modal-solaire')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails
+                                </button>
+                                <a href="Rapport_Solaire.pdf" target="_blank" class="flex-1 py-3 bg-yellow-50 text-yellow-600 rounded-xl hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium text-sm">
+                                    <i data-lucide="file-text" class="w-4 h-4"></i> Rapport
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Photo-pléthysmographe -->
-                     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
                         <div class="h-64 bg-slate-50 relative overflow-hidden">
                             <img src="./images/projet_ppg.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-500 shadow-sm">S3 2025</div>
@@ -209,35 +238,13 @@
                             <h3 class="text-xl font-bold text-slate-900 group-hover:text-red-500 transition mb-3">Capteur Cardiaque (PPG)</h3>
                             <p class="text-slate-500 text-sm mb-6 leading-relaxed">Conception d'un photo-pléthysmographe analogique. Chaîne complète : capteur optique, filtrage actif, amplification et traitement.</p>
                             <div class="mt-auto">
-                                <button class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium" onclick="openModal('modal-ppg')">
-                                    <i data-lucide="eye" class="w-4 h-4"></i> Technique
+                                <button class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 font-medium border border-slate-100" onclick="openModal('modal-ppg')">
+                                    <i data-lucide="eye" class="w-4 h-4"></i> Détails Techniques
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- PROJETS 1ERE ANNEE -->
-            <div>
-                <h3 class="text-2xl font-bold text-slate-800 mb-8 pl-4 border-l-4 border-accent">Projets 1ère Année (BUT 1)</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Micro-plastiques -->
-                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
-                        <div class="h-64 bg-slate-50 relative overflow-hidden">
-                            <img src="./images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-accent shadow-sm">S1-S2 2024</div>
-                        </div>
-                        <div class="p-8 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-accent transition mb-3">Analyse Micro-Plastiques</h3>
-                            <p class="text-slate-500 text-sm mb-6">Collecte en mer et caractérisation en laboratoire (Spectroscopie IR, Chromatographie).</p>
-                            <div class="mt-auto">
-                                <button class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl hover:bg-accent hover:text-white transition-all duration-300 text-sm font-medium flex items-center justify-center gap-2" onclick="openModal('modal-micro')">
-                                    <i data-lucide="eye" class="w-4 h-4"></i> Analyse
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -251,12 +258,9 @@
             </h2>
             
             <div class="grid gap-8">
-                
-                <!-- BUT MP (ACCORDÉON INTERACTIF) -->
+                <!-- BUT MP -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition-all duration-300 cursor-pointer group" onclick="toggleSection('edu-but', 'icon-but')">
-                    <!-- Header de la carte -->
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
-                        <!-- LOGO IUT -->
                         <div class="w-24 h-24 bg-white rounded-2xl border border-slate-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform overflow-hidden">
                             <img src="./images/logo_iut.jpg" alt="Logo IUT Créteil" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xs text-center\'>IUT</span>'">
                         </div>
@@ -269,11 +273,8 @@
                             <i data-lucide="chevron-down" id="icon-but" class="w-6 h-6 text-slate-400 transition-transform duration-300"></i>
                         </div>
                     </div>
-
-                    <!-- Contenu Déroulant -->
                     <div id="edu-but" class="accordion-content bg-slate-50 border-t border-slate-100 px-8">
                         <div class="py-10">
-                            <!-- Résumé du texte fourni -->
                             <div class="prose prose-slate max-w-none text-slate-600 mb-12 leading-relaxed">
                                 <p class="mb-4"><strong class="text-slate-800">Diplôme professionnel de niveau 6 (Bac +3)</strong>, centré sur la science de la mesure. Une formation pluridisciplinaire alliant <span class="text-primary font-medium">Physique, Chimie, Électronique et Informatique</span>.</p>
                                 <div class="grid md:grid-cols-2 gap-6 mt-6">
@@ -287,13 +288,8 @@
                                     </div>
                                 </div>
                             </div>
-
                             <h4 class="text-xl font-bold text-slate-900 mb-8 text-center">Référentiel de Compétences</h4>
-                            
-                            <!-- GRID DES 5 COMPÉTENCES (Style Apple Widgets) -->
-                            <!-- Note: e.stopPropagation() empêche l'accordéon de se refermer quand on clique sur une carte -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                                
                                 <!-- Mener (Rouge) -->
                                 <div onclick="event.stopPropagation(); openCompetence('mener')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
@@ -303,7 +299,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Mener</h5>
                                     <p class="text-xs text-slate-500 mt-1">Une campagne de mesures</p>
                                 </div>
-
                                 <!-- Déployer (Orange) -->
                                 <div onclick="event.stopPropagation(); openCompetence('deployer')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-orange-500"></div>
@@ -313,7 +308,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Déployer</h5>
                                     <p class="text-xs text-slate-500 mt-1">Métrologie & Qualité</p>
                                 </div>
-
                                 <!-- Mettre en œuvre (Jaune) -->
                                 <div onclick="event.stopPropagation(); openCompetence('oeuvre')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500"></div>
@@ -323,7 +317,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg leading-tight">Mettre en œuvre</h5>
                                     <p class="text-xs text-slate-500 mt-1">Chaîne de mesure</p>
                                 </div>
-
                                 <!-- Caractériser (Vert) -->
                                 <div onclick="event.stopPropagation(); openCompetence('caracteriser')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
@@ -333,7 +326,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Caractériser</h5>
                                     <p class="text-xs text-slate-500 mt-1">Grandeurs & Matériaux</p>
                                 </div>
-
                                 <!-- Définir (Bleu) -->
                                 <div onclick="event.stopPropagation(); openCompetence('definir')" class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow-blue hover:-translate-y-1 transition-all cursor-pointer group/card relative overflow-hidden">
                                     <div class="absolute top-0 left-0 w-full h-1 bg-blue-600"></div>
@@ -343,7 +335,6 @@
                                     <h5 class="font-bold text-slate-800 text-lg">Définir</h5>
                                     <p class="text-xs text-slate-500 mt-1">Cahier des charges</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -352,7 +343,6 @@
                 <!-- Licence Physique (Accordéon) -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition cursor-pointer group" onclick="toggleSection('edu-licence', 'icon-licence')">
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
-                        <!-- LOGO UPEC AJOUTÉ ICI -->
                         <div class="w-24 h-24 bg-purple-50 rounded-2xl border border-purple-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                             <img src="./images/logo_upec.jpg" alt="Logo UPEC" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xl text-purple-600 font-bold\'>L1</span>'">
                         </div>
@@ -364,7 +354,6 @@
                             <i data-lucide="chevron-down" id="icon-licence" class="w-6 h-6 text-slate-400 transition-transform duration-300"></i>
                         </div>
                     </div>
-
                     <div id="edu-licence" class="accordion-content bg-slate-50 border-t border-slate-100 px-8">
                         <div class="py-8 grid md:grid-cols-2 gap-8 text-sm text-slate-600">
                             <div>
@@ -406,11 +395,10 @@
                     <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white box-content shadow-md group-hover:scale-125 transition"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                         <div class="flex items-center gap-4">
-                            <!-- LOGO CNRS -->
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-1">
                                 <img src="./images/logo_cnrs.jpg" alt="CNRS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bold text-slate-700\'>C</span>'">
                             </div>
-                            <h4 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition">Stagiaire de recherche</h4>
+                            <h4 class="text-xl font-bold text-slate-800 group-hover:text-emerald-600 transition">Technicien de laboratoire (Stage)</h4>
                         </div>
                         <span class="text-sm text-emerald-700 font-mono bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">Avril - Juin 2026</span>
                     </div>
@@ -427,37 +415,36 @@
                     </div>
                 </div>
 
-                <!-- Bénévolat -->
-                <div class="relative pl-8 md:pl-12 group cursor-pointer" onclick="toggleSection('exp-asso', 'icon-asso')">
+                <!-- Bénévolat / Quartier sans violence -->
+                <div class="relative pl-8 md:pl-12 group cursor-pointer" onclick="toggleSection('exp-qsv', 'icon-qsv')">
                     <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white box-content shadow-md group-hover:scale-125 transition"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                         <div class="flex items-center gap-4">
-                            <!-- LOGO ASSO AJOUTÉ ICI -->
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-1">
-                                <img src="./images/logo_asso.jpg" alt="Asso" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bold text-slate-700\'>A</span>'">
+                                <img src="./images/logo_qsv.jpg" alt="QSV" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bold text-slate-700\'>Q</span>'">
                             </div>
                             <h4 class="text-xl font-bold text-slate-800 group-hover:text-cyan-600 transition">Bénévolat Associatif</h4>
                         </div>
                         <span class="text-sm text-cyan-700 font-mono bg-cyan-50 border border-cyan-100 px-3 py-1 rounded-full">Jan 2021 - Aujourd'hui</span>
                     </div>
-                    <div class="text-slate-500 font-medium mb-4 pl-16">Association Au Bonheur des Loulous <i data-lucide="chevron-down" id="icon-asso" class="w-4 h-4 inline-block ml-2 transition-transform duration-300"></i></div>
-                    <div id="exp-asso" class="accordion-content bg-slate-50 p-6 rounded-2xl border border-slate-100 ml-16">
+                    <div class="text-slate-500 font-medium mb-4 pl-16">Quartier sans violence <i data-lucide="chevron-down" id="icon-qsv" class="w-4 h-4 inline-block ml-2 transition-transform duration-300"></i></div>
+                    <div id="exp-qsv" class="accordion-content bg-slate-50 p-6 rounded-2xl border border-slate-100 ml-16">
                         <ul class="list-disc list-inside text-slate-600 text-sm space-y-2 mb-4">
                             <li>Organisation d'événements de collecte de fonds.</li>
                             <li>Conception et déploiement de programmes de sensibilisation.</li>
                             <li>Coordination de bénévoles et gestion des plannings.</li>
                         </ul>
                         <div class="mt-4">
-                            <img src="./images/asso_activite.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                            <img src="./images/qsv_activite.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
                         </div>
                     </div>
                 </div>
+
                 <!-- Active Répartition -->
                 <div class="relative pl-8 md:pl-12 group cursor-pointer" onclick="toggleSection('exp-pharma', 'icon-pharma')">
                     <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-orange-500 border-4 border-white box-content shadow-md group-hover:scale-125 transition"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                         <div class="flex items-center gap-4">
-                            <!-- LOGO PHARMA AJOUTÉ ICI -->
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-1">
                                 <img src="./images/logo_pharma.jpg" alt="Pharma" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bold text-slate-700\'>Ph</span>'">
                             </div>
@@ -478,21 +465,21 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SECTION COMPETENCES (Style Apple Light) -->
+    <!-- SECTION COMPETENCES -->
     <section id="competences" class="py-24 bg-soft border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-slate-900 mb-16 flex items-center gap-4">
-                <!-- Logo modifié : Fond bleu clair, icone bleue, plus de fond noir -->
                 <div class="p-3 bg-blue-100 text-primary rounded-2xl shadow-sm border border-blue-200"><i data-lucide="boxes" class="w-6 h-6"></i></div>
                 Compétences Techniques
             </h2>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Carte 1 : Instrumentation -->
+                <!-- Instrumentation -->
                 <div class="bg-white p-10 rounded-[2rem] border border-slate-100 hover:border-blue-200 shadow-apple hover:shadow-apple-hover hover:scale-[1.01] transition-all duration-500">
                     <div class="flex items-center gap-6 mb-8">
                         <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
@@ -500,7 +487,6 @@
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Instrumentation & Élec</h3>
                     </div>
-                    <!-- Badges interactifs "Apple Light" -->
                     <div class="flex flex-wrap gap-3">
                         <span class="px-5 py-2.5 bg-slate-50 rounded-full text-slate-600 font-medium border border-transparent interactive-term transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 hover:shadow-sm" onclick="showDef('oscilloscope')">Oscilloscope</span>
                         <span class="px-5 py-2.5 bg-slate-50 rounded-full text-slate-600 font-medium border border-transparent interactive-term transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 hover:shadow-sm" onclick="showDef('gbf')">GBF / Multimètre</span>
@@ -509,7 +495,7 @@
                     </div>
                 </div>
 
-                <!-- Carte 2 : Chimie -->
+                <!-- Chimie -->
                 <div class="bg-white p-10 rounded-[2rem] border border-slate-100 hover:border-emerald-200 shadow-apple hover:shadow-apple-hover hover:scale-[1.01] transition-all duration-500">
                     <div class="flex items-center gap-6 mb-8">
                         <div class="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
@@ -524,7 +510,7 @@
                     </div>
                 </div>
 
-                <!-- Carte 3 : Informatique -->
+                <!-- Informatique -->
                 <div class="bg-white p-10 rounded-[2rem] border border-slate-100 hover:border-purple-200 shadow-apple hover:shadow-apple-hover hover:scale-[1.01] transition-all duration-500">
                     <div class="flex items-center gap-6 mb-8">
                         <div class="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 border border-purple-100">
@@ -540,7 +526,7 @@
                     </div>
                 </div>
 
-                <!-- Carte 4 : Soft Skills -->
+                <!-- Soft Skills -->
                 <div class="bg-white p-10 rounded-[2rem] border border-slate-100 hover:border-yellow-200 shadow-apple hover:shadow-apple-hover hover:scale-[1.01] transition-all duration-500">
                     <div class="flex items-center gap-6 mb-8">
                         <div class="w-16 h-16 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-600 border border-yellow-100">
@@ -559,48 +545,42 @@
 
             <!-- AJOUT VOLTAIRE ICI -->
             <h3 class="text-2xl font-bold text-slate-800 mt-16 mb-8 pl-4 border-l-4 border-yellow-400">Certifications</h3>
-            <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-100 shadow-apple flex items-center gap-6 hover:shadow-apple-hover transition-all duration-500 group">
-                <div class="w-16 h-16 bg-yellow-50 text-yellow-500 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform border border-yellow-100">
-                    <i data-lucide="scroll-text" class="w-8 h-8"></i>
+            <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-100 shadow-apple flex flex-col md:flex-row items-start md:items-center gap-6 hover:shadow-apple-hover transition-all duration-500 group">
+                <div class="w-24 h-24 bg-white rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform border border-slate-100 shadow-sm overflow-hidden p-2">
+                    <!-- EMPLACEMENT IMAGE LOGO VOLTAIRE -->
+                    <img src="./images/logo_voltaire.jpg" alt="Certification Voltaire" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<i data-lucide=\'scroll-text\' class=\'w-10 h-10 text-yellow-500\'></i>'">
                 </div>
                 <div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Certification Voltaire</h3>
-                    <p class="text-slate-500 text-sm md:text-base">Certification obtenue attestant d'une excellente maîtrise de l'orthographe et de la grammaire française.</p>
+                    <p class="text-slate-500 text-sm md:text-base">Certification obtenue attestant d'une excellente maîtrise de l'orthographe et de la grammaire française. Un atout majeur pour la rédaction de rapports scientifiques et la communication professionnelle.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- SECTION LANGUES (Style Apple Light - Bordures) -->
+    <!-- SECTION LANGUES -->
     <section id="langues" class="py-24 border-t border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-slate-900 mb-16 flex items-center justify-center gap-3">
                 <i data-lucide="languages" class="text-primary w-8 h-8"></i> Langues Maîtrisées
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                <!-- Français : Bleu -->
                 <div class="group flex flex-col items-center gap-3 bg-white px-4 py-8 rounded-3xl border border-slate-100 transition-all duration-300 hover:shadow-apple-hover hover:border-blue-500 hover:bg-blue-50/30">
                     <img src="https://flagcdn.com/w80/fr.png" alt="France" class="w-14 h-auto rounded-lg shadow-sm">
                     <div class="font-bold text-slate-800 text-lg mt-2 transition-colors">Français</div>
                     <div class="text-xs text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-full transition-colors">Langue maternelle</div>
                 </div>
-                
-                <!-- Arabe : Vert -->
                 <div class="group flex flex-col items-center gap-3 bg-white px-4 py-8 rounded-3xl border border-slate-100 transition-all duration-300 hover:shadow-apple-hover hover:border-emerald-500 hover:bg-emerald-50/30">
                     <img src="https://flagcdn.com/w80/sa.png" alt="Arabe" class="w-14 h-auto rounded-lg shadow-sm">
                     <div class="font-bold text-slate-800 text-lg mt-2 transition-colors">Arabe</div>
                     <div class="text-xs text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-full transition-colors">Langue maternelle</div>
                 </div>
-                
-                <!-- Anglais : Bleu (Variante) -->
                 <div class="group flex flex-col items-center gap-3 bg-white px-4 py-8 rounded-3xl border border-slate-100 transition-all duration-300 hover:shadow-apple-hover hover:border-blue-500 hover:bg-blue-50/30">
                     <img src="https://flagcdn.com/w80/gb.png" alt="Anglais" class="w-14 h-auto rounded-lg shadow-sm">
                     <div class="font-bold text-slate-800 text-lg mt-2 transition-colors">Anglais</div>
                     <div class="text-xs text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1 rounded-full transition-colors">B1 Professionnel</div>
                 </div>
-                
-                <!-- Espagnol : Jaune -->
                 <div class="group flex flex-col items-center gap-3 bg-white px-4 py-8 rounded-3xl border border-slate-100 transition-all duration-300 hover:shadow-apple-hover hover:border-yellow-500 hover:bg-yellow-50/30">
                     <img src="https://flagcdn.com/w80/es.png" alt="Espagnol" class="w-14 h-auto rounded-lg shadow-sm">
                     <div class="font-bold text-slate-800 text-lg mt-2 transition-colors">Espagnol</div>
@@ -632,21 +612,18 @@
 
             <h2 class="text-4xl font-bold text-slate-900 mb-10">Me Contacter</h2>
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <!-- Lien MAIL (Ouvre Modale) -->
                 <button onclick="openModal('modal-mail')" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-primary shadow-apple hover:shadow-apple-hover">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-primary">
                         <i data-lucide="mail" class="w-7 h-7"></i>
                     </div>
                     <span class="text-slate-600 text-lg font-medium group-hover:text-primary transition">Email</span>
                 </button>
-                
                 <a href="https://www.linkedin.com/in/marwa-zine-el-abidine-839ba22aa" target="_blank" class="p-8 bg-white rounded-3xl hover:bg-blue-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-blue-600 shadow-apple hover:shadow-apple-hover">
                     <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 text-blue-600">
                         <i data-lucide="linkedin" class="w-7 h-7"></i>
                     </div>
                     <span class="text-slate-600 text-lg font-medium group-hover:text-blue-600 transition">LinkedIn</span>
                 </a>
-                
                 <a href="tel:+33650181722" class="p-8 bg-white rounded-3xl hover:bg-green-50 transition flex flex-col items-center gap-4 group border border-transparent hover:border-accent shadow-apple hover:shadow-apple-hover">
                     <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-accent">
                         <i data-lucide="phone" class="w-7 h-7"></i>
@@ -654,12 +631,11 @@
                     <span class="text-slate-600 text-lg font-medium group-hover:text-accent transition">06 50 18 17 22</span>
                 </a>
             </div>
-            
             <p class="text-slate-400 text-sm mt-16">&copy; 2026 Marwa ZINE EL ABIDINE. Tous droits réservés.</p>
         </div>
     </section>
 
-    <!-- Modale EMAIL (Nouveau) -->
+    <!-- Modale EMAIL -->
     <div id="modal-mail" class="modal">
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm p-8 relative flex flex-col items-center text-center">
             <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal"><i data-lucide="x"></i></button>
@@ -668,11 +644,9 @@
             </div>
             <h3 class="text-2xl font-bold text-slate-900 mb-2">Mon Email</h3>
             <p class="text-slate-500 mb-6">N'hésitez pas à me contacter pour toute opportunité.</p>
-            
             <div class="bg-slate-100 rounded-xl p-3 w-full mb-4 flex items-center justify-center border border-slate-200">
                 <code class="text-slate-800 font-mono text-sm" id="email-text">marwa_zine91@outlook.fr</code>
             </div>
-            
             <div class="flex gap-3 w-full">
                 <button onclick="navigator.clipboard.writeText('marwa_zine91@outlook.fr'); this.innerText='Copié !'; setTimeout(()=>this.innerText='Copier', 2000)" class="flex-1 py-3 bg-slate-200 text-slate-700 rounded-xl font-medium hover:bg-slate-300 transition">
                     Copier
@@ -697,46 +671,88 @@
     <div id="modal-competence" class="modal">
         <div class="bg-white rounded-[2rem] shadow-2xl w-full max-w-2xl p-8 relative flex flex-col">
             <button class="absolute top-6 right-6 text-slate-400 hover:text-slate-800 close-modal transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
-            <!-- Header de la modale -->
             <div class="flex items-center gap-4 mb-8">
-                <div id="comp-icon-container" class="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                    <!-- Icone injectée par JS -->
-                </div>
+                <div id="comp-icon-container" class="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg"></div>
                 <div>
                     <h3 id="comp-title" class="text-3xl font-bold text-slate-900">Titre</h3>
                     <p id="comp-subtitle" class="text-slate-500 text-lg font-medium">Sous-titre</p>
                 </div>
             </div>
-            <!-- Contenu des niveaux (Timeline) -->
-            <div id="comp-levels" class="space-y-4">
-                <!-- Injection JS ici -->
-            </div>
+            <div id="comp-levels" class="space-y-4"></div>
         </div>
     </div>
 
-    <!-- Modales Projets (Style unifié) -->
+    <!-- Modale PROJET EAU -->
     <div id="modal-eau" class="modal">
-        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-6 relative max-h-[90vh] overflow-y-auto flex flex-col md:flex-row gap-8">
-            <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal z-10"><i data-lucide="x"></i></button>
-            <div class="w-full md:w-1/2">
-                <img src="./images/projet_eau.jpg" class="w-full h-64 md:h-full rounded-2xl object-cover shadow-md" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-8 relative max-h-[90vh] overflow-y-auto flex flex-col">
+            <button class="absolute top-6 right-6 text-slate-400 hover:text-red-500 close-modal z-10"><i data-lucide="x"></i></button>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Projet 1 : Organisation de la Journée Mondiale de l'Eau</h2>
+            <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-6 self-start">Projet S3-S4 (UPEC)</div>
+            
+            <div class="space-y-5 text-slate-600 leading-relaxed text-sm">
+                <p><strong class="text-slate-800">Objectifs :</strong> L'objectif principal était de sensibiliser un grand nombre d'étudiants à l'importance de l'eau, à sa valeur, à sa fragilité et aux gestes permettant de la préserver au quotidien. Il était prévu initialement de toucher environ 300 personnes et de procéder à une distribution de gourdes réutilisables.</p>
+                <p><strong class="text-slate-800">Mon rôle :</strong> J'ai occupé un rôle d'organisation et de coordination central pour cet événement majeur du campus début 2026. Mes missions incluaient la planification soutenue des cycles de conférences, la structuration de la logistique globale et l'aménagement des différents stands interactifs.</p>
+                
+                <h4 class="font-bold text-slate-800 text-base mt-6">Méthodologies utilisées :</h4>
+                <ul class="list-disc list-inside space-y-2 marker:text-blue-500 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                    <li>Mise en place d'une répartition des rôles ciblée au sein de l'équipe et utilisation d'outils collaboratifs (WhatsApp pour la logistique opérationnelle, Canva pour la création de l'identité visuelle).</li>
+                    <li>Création d'un montage financier rigoureux chiffré à 9 001,09 € TTC, dont le financement a été assuré par la subvention de la CVEC et le soutien privé de l'entreprise AZA BATTERY.</li>
+                    <li>Stratégie d'achat axée sur la conformité administrative en se tournant exclusivement vers des fournisseurs agréés par les institutions publiques.</li>
+                    <li>Gestion réactive des imprévus météorologiques en relocalisant les stands sur des zones stratégiques pour maintenir la captation des flux étudiants.</li>
+                    <li>Création d'activités pratiques, comme l'évaluation des paramètres physico-chimiques de l'eau, faisant un lien direct avec les compétences du parcours Mesures et Analyses Environnementales.</li>
+                </ul>
+
+                <h4 class="font-bold text-slate-800 text-base mt-6">Résultats obtenus :</h4>
+                <ul class="list-disc list-inside space-y-2 marker:text-green-500 bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
+                    <li>Une forte affluence avec 600 participants, ce qui représente un dépassement de 20 % par rapport aux 500 personnes initialement espérées.</li>
+                    <li>Récompense de l'engagement étudiant par la distribution de 525 gourdes réutilisables.</li>
+                    <li>Gestion budgétaire d'une précision totale, avec exactement 9 000 € dépensés.</li>
+                    <li>Fort succès des formats interactifs et ludiques, permettant par ailleurs de récolter des dons pour la construction de puits en Afrique.</li>
+                </ul>
             </div>
-            <div class="w-full md:w-1/2 py-4 pr-4">
-                <h2 class="text-3xl font-bold text-slate-900 mb-2">Journée Mondiale de l'Eau</h2>
-                <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-6">Projet S3-S4</div>
-                <div class="space-y-4 text-slate-600 leading-relaxed">
-                    <p>Organisation d'un événement majeur à l'UPEC pour sensibiliser les étudiants et le personnel aux enjeux de l'eau.</p>
-                    <h4 class="font-bold text-slate-800 mt-4">Mes missions :</h4>
-                    <ul class="list-disc list-inside space-y-2 marker:text-blue-500">
-                        <li>Coordination de l'équipe organisatrice (5 personnes).</li>
-                        <li>Création des affiches et supports visuels (Canva).</li>
-                        <li>Animation d'un atelier "Cycle de l'eau" avec expériences ludiques.</li>
-                    </ul>
-                </div>
+            
+            <div class="mt-8 text-center">
+                <a href="Rapport_Journee_Eau.pdf" target="_blank" class="inline-flex py-3 px-6 bg-primary text-white rounded-xl hover:bg-blue-600 transition-all duration-300 items-center justify-center gap-2 font-medium">
+                    <i data-lucide="file-text" class="w-5 h-5"></i> Consulter le rapport complet
+                </a>
             </div>
         </div>
     </div>
     
+    <!-- Modale PROJET SOLAIRE (Nouveau) -->
+    <div id="modal-solaire" class="modal">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-8 relative max-h-[90vh] overflow-y-auto flex flex-col">
+            <button class="absolute top-6 right-6 text-slate-400 hover:text-red-500 close-modal z-10"><i data-lucide="x"></i></button>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Projet Photovoltaïque Individuel</h2>
+            <div class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-bold mb-6 self-start">Énergie & Environnement</div>
+            
+            <div class="space-y-5 text-slate-600 leading-relaxed text-sm">
+                <p><strong class="text-slate-800">Objectif :</strong> Dimensionnement complet d'une installation solaire photovoltaïque pour le bâtiment principal du lycée Kléber à Strasbourg, afin de couvrir une consommation estimée à 300 000 kWh/an.</p>
+                
+                <h4 class="font-bold text-slate-800 text-base mt-6">Méthodologie & Outils :</h4>
+                <ul class="list-disc list-inside space-y-2 marker:text-yellow-500 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                    <li>Utilisation de <strong>Google Earth</strong> pour la modélisation 3D, la mesure de la surface exploitable sur le toit ($765 m^2$) et le calcul de l'espacement optimal (0,64 m) pour éviter les ombrages.</li>
+                    <li>Simulation approfondie sur le logiciel professionnel <strong>PVsyst</strong>. Sélection de 54 modules AKCOME 700W et d'un onduleur Ingecon Sun 33TL.</li>
+                    <li>Paramétrage des pertes détaillées du système : pertes thermiques, ohmiques, encrassement (3%) et évaluation du vieillissement sur 25 ans.</li>
+                </ul>
+
+                <h4 class="font-bold text-slate-800 text-base mt-6">Résultats et Bilan Économique :</h4>
+                <ul class="list-disc list-inside space-y-2 marker:text-green-500 bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
+                    <li>Production annuelle estimée générée par le système : <strong>40,5 MWh/an</strong>.</li>
+                    <li>Projet défini comme hautement rentable avec un temps de retour sur investissement rapide de <strong>4 ans</strong>.</li>
+                    <li>Taux de rentabilité interne (TRI) exceptionnel de <strong>26,92 %</strong> pour un investissement initial (CAPEX) de 28 712 €.</li>
+                </ul>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="Rapport_Solaire.pdf" target="_blank" class="inline-flex py-3 px-6 bg-yellow-500 text-white rounded-xl hover:bg-yellow-600 transition-all duration-300 items-center justify-center gap-2 font-medium">
+                    <i data-lucide="file-text" class="w-5 h-5"></i> Consulter l'étude PVsyst
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale PROJET PPG -->
     <div id="modal-ppg" class="modal">
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 relative">
              <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal"><i data-lucide="x"></i></button>
@@ -754,11 +770,12 @@
         </div>
     </div>
     
+    <!-- Modale PROJET MICRO -->
     <div id="modal-micro" class="modal">
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 relative">
              <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal"><i data-lucide="x"></i></button>
              <h2 class="text-2xl font-bold text-slate-900 mb-2">Micro-Plastiques</h2>
-             <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-6">Chimie & Env. S1-S2</div>
+             <div class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-6">Chimie & Env. S3</div>
              <div class="space-y-4 text-slate-600 text-sm">
                  <p>Projet de recherche sur la pollution marine dans le cadre de la "Régate des IUT".</p>
                  <ul class="list-disc list-inside space-y-1 marker:text-green-500">
@@ -783,7 +800,7 @@
                 'oscilloscope': { title: 'Oscilloscope', text: "Instrument incontournable qui affiche la tension électrique en fonction du temps. Permet d'analyser la forme, la fréquence et l'amplitude d'un signal." },
                 'gbf': { title: 'GBF (Générateur Basse Fréquence)', text: "Source de tension capable de produire des signaux périodiques (sinusoïdaux, carrés, triangles) pour stimuler et tester des circuits électroniques." },
                 'capteurs': { title: 'Capteurs', text: "Dispositifs convertissant une grandeur physique (température, lumière, force...) en un signal électrique mesurable par nos instruments." },
-                'aop': { title: 'AOP (Ampli Opérationnel)', text: "Composant actif polyvalent utilisé pour amplifier un signal, le filtrer, ou réaliser des operations mathématiques (somme, intégration) en analogique." },
+                'aop': { title: 'AOP (Ampli Opérationnel)', text: "Composant actif polyvalent utilisé pour amplifier un signal, le filtrer, ou réaliser des opérations mathématiques (somme, intégration) en analogique." },
                 'spectro': { title: 'Spectroscopie IR', text: "Technique d'analyse chimique basée sur l'absorption de la lumière infrarouge par les molécules. Permet d'identifier les liaisons chimiques et la nature d'un échantillon." },
                 'chromato': { title: 'Chromatographie', text: "Méthode de séparation des constituants d'un mélange complexe (liquide ou gaz) en les faisant migrer à différentes vitesses sur un support." },
                 'solutions': { title: 'Chimie des solutions', text: "Étude des réactions chimiques en milieu liquide : équilibres acido-basiques (pH), réactions d'oxydoréduction et précipitation." }
@@ -894,22 +911,19 @@
             const data = competencesData[key];
             if (!data) return;
 
-            // Remplissage Header
             const iconContainer = document.getElementById('comp-icon-container');
             iconContainer.className = `w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg ${data.colorClass}`;
             iconContainer.innerHTML = `<i data-lucide="${data.icon}" class="w-8 h-8"></i>`;
-            lucide.createIcons(); // Re-render icon inside modal
+            lucide.createIcons();
 
             document.getElementById('comp-title').innerText = data.title;
-            document.getElementById('comp-title').className = `text-3xl font-bold ${data.textClass.replace('700', '600')}`; // Couleur titre
+            document.getElementById('comp-title').className = `text-3xl font-bold ${data.textClass.replace('700', '600')}`;
             document.getElementById('comp-subtitle').innerText = data.subtitle;
 
-            // Génération des niveaux (Timeline Cards)
             const levelsContainer = document.getElementById('comp-levels');
-            levelsContainer.innerHTML = ''; // Reset
+            levelsContainer.innerHTML = ''; 
 
             data.levels.forEach((level, index) => {
-                // Création HTML de la carte niveau
                 const div = document.createElement('div');
                 div.className = `flex gap-4 p-4 rounded-xl border ${data.borderClass} ${data.lightClass} items-start`;
                 div.innerHTML = `
